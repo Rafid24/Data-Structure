@@ -39,15 +39,5 @@ int main()
         }
     }
     printf("Location = %d\n",loc);
-
-    for (i = 0; i < n ; i++)
-    {
-        if (key == arr[i] )
-        {
-            found++;
-            //break;
-        }
-    }
-    printf("The number is %d times\n",found);
     return 0;
 }
