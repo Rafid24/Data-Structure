@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+#include <string.h>
+using namespace std;
+
+int M[100][100], R, C;
+
+void gettingMatrix()
+{
+      FILE *inputFile;
+      inputFile = fopen("input.txt", "r");
+      char h[100], *token;
+      int i = 0, j;
+      while(!feof(inputFile))
+      {
+            fscanf(inputFile, "%s", h);
+            token = strtok(h, ",");
+            j = 0;
+            while(token != NULL)
+            {
+                  M[i][j] = atoi(token);
+                  //cout << M[i][j] << endl;
+                  token = strtok(NULL, ",");
+                  j++;
+             }
+             i++;
+      }
+      R = i;
+      C = j;
+}
+
+
+
+/*void printMatrix()
+{
+      for(int i = 0; i < R; i++)
+      {
+            for(int j = 0; j < C; j++)
+            {
+                  printf(" %d", M[i][j]);
+            }
+            printf("\n");
+      }
+}*/
+
+int main()
+{
+      gettingMatrix();
+      gettingInstruction();
+      printMatrix();
+}
